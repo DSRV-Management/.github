@@ -1,26 +1,38 @@
-# DSRV Management
+# DSRV Management Enterprise
 
-DSRV Management builds software systems for quality, stability, operational intelligence, and AI-assisted engineering.
+DSRV Management is the enterprise home for DSRV’s engineering, quality, and AI-assisted software delivery work.
 
-Our work focuses on turning complex pharmaceutical, compliance, and operational workflows into clear, auditable, human-reviewable systems.
+This enterprise supports the repositories, workflows, and operational systems behind DSRV platform development, including stability intelligence, pharmaceutical quality workflows, Local HQ operations, and agent-assisted PR review.
 
-## What we build
+## Mission
 
-### Stability and quality platforms
+DSRV builds software systems that help turn complex operational, quality, and compliance workflows into clear, auditable, human-reviewable processes.
 
-Tools for pharmaceutical stability and quality workflows, including:
+Our engineering model combines:
+
+- Human-owned product direction
+- AI-assisted development
+- Evidence-backed QA
+- Pull request review discipline
+- Clear approval gates before production changes
+
+## Core platforms
+
+### DSRV Stability / ECI
+
+The DSRV Stability and ECI platform supports pharmaceutical stability-program workflows, including:
 
 - Stability study visibility
-- Study health triage
+- Study health and triage
 - OOS / OOT surfacing
-- Shelf-life analysis support
+- Shelf-life analysis
 - Import review and signoff
 - Quality evidence tracking
 - Human-in-the-loop review flows
 
-### Local HQ operations
+### Local HQ
 
-Internal operations systems for managing DSRV delivery work, including:
+Local HQ is the operational command center for DSRV work. It supports:
 
 - Workflow tickets
 - QA receipts
@@ -29,46 +41,15 @@ Internal operations systems for managing DSRV delivery work, including:
 - Review handoffs
 - Operational audit trails
 
-### AI-assisted engineering systems
+### DSRV Platform
 
-Developer and review workflows that use AI agents to improve throughput while keeping production decisions human-owned.
+The broader DSRV platform includes internal and external product surfaces for dashboards, customer workflows, intelligence tools, and operational systems.
 
-Core goals:
+## Engineering workflow
 
-- Faster implementation cycles
-- Better PR review capacity
-- Evidence-backed QA
-- Clear approval gates
-- Inspectable agent-generated work
-- Controlled production change management
+DSRV uses a structured AI-assisted engineering workflow.
 
-## Engineering principles
-
-DSRV repositories should be built around:
-
-- Traceable work
-- Reviewable pull requests
-- Clear verification evidence
-- Separation between production code, experiments, and agent scratch work
-- No secrets in code, issues, PRs, comments, or logs
-- Least-privilege access
-- Human approval before production-impacting changes
-
-## Quality mindset
-
-Because DSRV systems may support pharmaceutical quality and stability workflows, we emphasize:
-
-- Data integrity
-- Reproducibility
-- Audit-friendly records
-- Controlled changes
-- Human review
-- Clear ownership
-- Evidence before claims
-
-## Operating model
-
-Typical engineering work moves through:
+Typical work passes through:
 
 1. Scoped issue or work-order definition
 2. Branch or PR implementation
@@ -78,21 +59,80 @@ Typical engineering work moves through:
 6. Human approval
 7. Controlled merge and deployment
 
-AI agents may assist with development, review, QA, documentation, and operational handoffs. Production-impacting decisions remain human-owned.
+AI agents may assist with development, review, QA, and documentation, but production-impacting decisions remain human-owned.
 
-## Repository expectations
+## Repository governance
 
-Repositories under this organization should include enough context for contributors and reviewers to understand:
+Repositories under this enterprise should follow these principles:
 
-- What the system does
-- Who owns it
-- How to run it locally
-- How to test it
-- How it is deployed
-- What data or access boundaries matter
-- What verification evidence is expected before merge
+- Keep production code, experiments, and agent scratch work clearly separated
+- Preserve clean git history and reviewable pull requests
+- Avoid committing secrets, credentials, generated junk, or local environment files
+- Require evidence for major fixes, launches, and production-readiness claims
+- Use protected branches and review gates where appropriate
+- Document ownership and operational context for critical systems
+
+## Security principles
+
+DSRV treats access control, authentication, and billing as sensitive enterprise-level functions.
+
+Security expectations:
+
+- Use least-privilege access
+- Avoid sharing credentials in issues, PRs, tickets, comments, or agent logs
+- Require owner review for permission changes
+- Treat SSO, billing, and enterprise-owner changes as high-impact administrative actions
+- Maintain recovery access before changing authentication configuration
+- Keep auditability for production and quality-system work
+
+## AI-assisted development
+
+DSRV uses AI-assisted engineering to increase throughput across PR creation, code review, QA, and operational documentation.
+
+Primary goals for enterprise-level AI workflows:
+
+- Higher coding and PR-review capacity
+- Centralized usage visibility
+- Better billing controls
+- Secure repository access
+- Reliable review and QA workflows
+- Clear separation between agent assistance and human approval
+
+## Quality and compliance mindset
+
+Because DSRV systems may support pharmaceutical quality and stability workflows, engineering work should emphasize:
+
+- Traceability
+- Data integrity
+- Human review
+- Clear evidence
+- Reproducible verification
+- Controlled changes
+- Audit-friendly documentation
+
+## Operating principles
+
+- No production-impacting change without review and verification
+- No secrets in code, tickets, comments, or agent-visible logs
+- PRs should include clear scope, testing evidence, and risk notes
+- QA findings should be captured with exact repro steps
+- Authentication, billing, and enterprise permissions require deliberate owner action
+- Agent-generated work must remain inspectable and human-approved
+
+## Enterprise administration
+
+Enterprise administration should remain limited to trusted owners.
+
+Recommended setup priorities:
+
+1. Maintain at least two trusted enterprise owners
+2. Confirm billing and AI usage model before scaling automation
+3. Configure SSO only after recovery access is confirmed
+4. Apply repo and branch protections to production systems
+5. Monitor usage, Actions minutes, Copilot/AI requests, and billing trends
 
 ## Contact
 
-Owner: Thedson Desravines  
-Organization: DSRV Management
+Enterprise owner: Thedson Desravines  
+Organization: DSRV-Management  
+Enterprise: dsrv-management-enterprise
